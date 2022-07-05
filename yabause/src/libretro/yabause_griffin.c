@@ -1,16 +1,16 @@
-#include "../yabause/src/snddummy.c"
+#include "../snddummy.c"
 
 #ifdef HAVE_THREADS
-#include "../yabause/src/thr-rthreads.c"
+#include "../thr-rthreads.c"
 #else
-#include "../yabause/src/thr-dummy.c"
+#include "../thr-dummy.c"
 #endif
 
-#include "../yabause/src/titan/titan.c"
-#include "../yabause/src/vdp1.c"
-#include "../yabause/src/vdp2.c"
-#include "../yabause/src/vidshared.c"
-#include "../yabause/src/vidsoft.c"
-#include "../yabause/src/yabause.c"
+#include "../titan/titan.c"
+#include "../vdp1.c"
+#include "../vdp2.c"
+#include "../vidshared.c"
+#include "../vidsoft.c"
+#include "../yabause.c"
 
 #include "libretro.c"
