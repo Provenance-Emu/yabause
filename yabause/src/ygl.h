@@ -39,10 +39,15 @@
   #endif
 
 #elif  defined(__APPLE__)
+#include <TargetConditionals.h>
+#if TARGET_OS_OSX
     #define GL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED
     #include <OpenGL/gl.h>
     #include <OpenGL/gl3.h>
-
+#else
+#include <OpenGLES/ES3/gl.h>
+#include <OpenGLES/ES3/glext.h>
+#endif
 #else // Linux?
     #if defined(_OGLES3_)||defined(_OGL3_)
         #define GL_GLEXT_PROTOTYPES 1

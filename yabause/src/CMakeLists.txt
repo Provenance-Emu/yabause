@@ -236,7 +236,7 @@ if (YAB_WANT_OPENGL AND (YAB_RGB STREQUAL ""))
 endif ()
 
 # SDL
-option(YAB_WANT_SDL "use SDL cores if available" ON)
+option(YAB_WANT_SDL "use SDL cores if available" OFF)
 if (YAB_WANT_SDL)
 	include(FindSDL2 OPTIONAL)
 
