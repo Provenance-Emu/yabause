@@ -45,6 +45,7 @@
     #include <OpenGL/gl.h>
     #include <OpenGL/gl3.h>
 #else
+#define _OGLES3_
 #include <OpenGLES/ES3/gl.h>
 #include <OpenGLES/ES3/glext.h>
 #endif

@@ -25,7 +25,7 @@
 #ifndef JOYSTICK_H
 #define JOYSTICK_H
 
-#include <IOKit/hid/IOHIDLib.h>
+//#include <IOKit/hid/IOHIDLib.h>
 
 /* Values for the joy_elemdata_t type element. */
 #define JOY_TYPE_NOT_APPLICABLE 0

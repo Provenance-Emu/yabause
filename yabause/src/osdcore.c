@@ -238,7 +238,8 @@ int OSDDummyUseBuffer(void)
 
 #ifdef HAVE_LIBGLUT
 #ifdef __APPLE__
-    #include <GLUT/glut.h>
+#include <OpenGLES/gltypes.h>
+//    #include <GLUT/glut.h>
 #else
     #include <GL/glut.h>
 #endif

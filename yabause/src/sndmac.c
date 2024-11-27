@@ -22,7 +22,7 @@
    sndsdl.c file in Yabause. */
 
 #include <AudioUnit/AudioUnit.h>
-#include <IOKit/audio/IOAudioTypes.h>
+//#include <IOKit/audio/IOAudioTypes.h>
 #include <pthread.h>
 #include <stdlib.h>
 #include <string.h>
@@ -123,7 +123,7 @@ int SNDMacInit(void) {
 
     /* Find the default audio output unit */
     desc.componentType = kAudioUnitType_Output;
-    desc.componentSubType = kAudioUnitSubType_DefaultOutput;
+    desc.componentSubType = kAudioUnitSubType_GenericOutput;
     desc.componentManufacturer = kAudioUnitManufacturer_Apple;
     desc.componentFlags = 0;
     desc.componentFlagsMask = 0;

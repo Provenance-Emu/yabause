@@ -830,9 +830,9 @@ int YglInit(int width, int height, unsigned int depth) {
       }
    }
 
-#if defined(_USEGLEW_)
-   glewInit();
-#endif
+//#if defined(_USEGLEW_)
+//   glewInit();
+//#endif
    YglGLInit(width, height);
 
    if( YglProgramInit() != 0 )

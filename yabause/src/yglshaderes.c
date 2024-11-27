@@ -21,6 +21,7 @@
 
 #ifdef HAVE_LIBGL
 
+#define _OGLES3_
 //#ifdef __ANDROID__
 #include <stdlib.h>
 #include <math.h>

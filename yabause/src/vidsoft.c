@@ -2255,7 +2255,7 @@ int VIDSoftSetupGL(void)
    outputwidth = vdp2width;
    outputheight = vdp2height;
 
-   glewInit();
+//   glewInit();
 
    glGenVertexArrays(1, &vao);
    glBindVertexArray(vao);

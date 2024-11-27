@@ -10,3 +10,4 @@
 .settings/
 **/*~
 *.a
+/yabause/build

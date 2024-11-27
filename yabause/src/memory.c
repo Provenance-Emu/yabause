@@ -48,6 +48,7 @@
 #include "movie.h"
 #include "sh7034.h"
 #include "ygr.h"
+//#include "GL/glew.h"
 
 #ifdef HAVE_LIBGL
 #define USE_OPENGL
@@ -1530,13 +1531,13 @@ int YabSaveStateStream(void ** stream)
    }
 
    YuiSwapBuffers();
-   #ifdef USE_OPENGL
-   glPixelZoom(1,1);
-   glReadBuffer(GL_BACK);
-   glReadPixels(0, 0, outputwidth, outputheight, GL_RGBA, GL_UNSIGNED_BYTE, buf);
-   #else
+//   #ifdef USE_OPENGL
+//   glPixelZoom(1,1);
+//   glReadBuffer(GL_BACK);
+//   glReadPixels(0, 0, outputwidth, outputheight, GL_RGBA, GL_UNSIGNED_BYTE, buf);
+//   #else
    memcpy(buf, dispbuffer, totalsize);
-   #endif
+//   #endif
    YuiSwapBuffers();
 
    MemStateWrite((void *)&outputwidth, sizeof(outputwidth), 1, stream);
@@ -1794,16 +1795,16 @@ int YabLoadStateStream(const void * stream, size_t size_stream)
    YuiSwapBuffers();
 
    #ifdef USE_OPENGL
-   if(VIDCore->id == VIDCORE_SOFT)
-     glRasterPos2i(0, outputheight);
-   if(VIDCore->id == VIDCORE_OGL)
-	 glRasterPos2i(0, outputheight/2);
+//   if(VIDCore->id == VIDCORE_SOFT)
+//     glRasterPos2i(0, outputheight);
+//   if(VIDCore->id == VIDCORE_OGL)
+//	 glRasterPos2i(0, outputheight/2);
    #endif
 
    VIDCore->GetGlSize(&curroutputwidth, &curroutputheight);
    #ifdef USE_OPENGL
-   glPixelZoom((float)curroutputwidth / (float)outputwidth, ((float)curroutputheight / (float)outputheight));
-   glDrawPixels(outputwidth, outputheight, GL_RGBA, GL_UNSIGNED_BYTE, buf);
+//   glPixelZoom((float)curroutputwidth / (float)outputwidth, ((float)curroutputheight / (float)outputheight));
+//   glDrawPixels(outputwidth, outputheight, GL_RGBA, GL_UNSIGNED_BYTE, buf);
    #endif
    YuiSwapBuffers();
    free(buf);
